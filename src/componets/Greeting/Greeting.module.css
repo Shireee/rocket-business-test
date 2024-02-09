@@ -1,0 +1,39 @@
+.greeting {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.greeting::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 533px;
+    background-color: #F8FBFA;
+    z-index: -1;
+}
+
+.greeting__textblock {
+    min-width: 50%;
+    height: 533px;
+}
+
+.greeting__title {
+    margin-top: 144px;
+    color: rgb(54, 72, 68);
+    font-family: PT Sans Caption;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 47px;
+}
+
+.greeting__text {
+    margin-top: 14px;
+    color: rgb(54, 72, 68);
+    font-family: PT Sans Caption;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
