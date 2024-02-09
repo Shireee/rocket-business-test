@@ -1,0 +1,32 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 43px;
+}
+
+.nav::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 43px;
+    background-color: rgb(31, 161, 129);
+}
+
+.nav__link{
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    font-family: PT Sans Caption;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.nav__link:last-child{
+    margin-right: 0;
+}

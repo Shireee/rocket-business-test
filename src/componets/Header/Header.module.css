@@ -1,0 +1,90 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 67px;
+    width: 100%;
+}
+
+.logoblock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 44px;
+}
+
+.address{
+    font-style: normal;
+    position: relative;
+}
+
+.address::before{
+    position: absolute;
+    top: 0;
+    left: -22px;
+    content: '';
+    width: 16px;
+    height: 20px;
+    background-image: url(../../img/mark.svg);
+}
+
+.address__title{
+    color: rgb(54, 72, 68);
+    font-family: PT Sans Caption;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.address__text{
+    color: rgb(134, 134, 134);
+    font-family: PT Sans Caption;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.contacts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 35px;
+}
+
+.contacts__phone{
+    color: rgb(54, 72, 68);
+    font-family: PT Sans Caption;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    position: relative;
+}
+
+.contacts__phone::before{
+    position: absolute;
+    content: '';
+    left: -35px;
+    top: -2px;
+    width: 27px;
+    height: 28px;
+    background-image: url(../../img/whatsapp-header-icon.svg);
+}
+
+.contacts__button{
+    color: rgb(255, 255, 255);
+    font-family: PT Sans Caption;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    border-radius: 50px;
+    border: none;
+    background: rgb(13, 188, 145);
+    width: 196px;
+    height: 43px;
+    cursor: pointer;
+}
+
+.contacts__button:hover{
+    background: #00D29F;
+}
