@@ -3,17 +3,17 @@ import styles from './PopUp.module.css';
 
 
 
-const PopUp: React.FC<React.PropsWithChildren<{ onClose: () => void }>> = ({ onClose }) => {
+const PopUp: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     return ( 
     <dialog className={styles.popup}>
-        <div className={styles.popupContainer}>
-            <div className={styles.buttonConteiner}>
+        <div className={styles.popup__container}>
+            <div className={styles.button__conteiner}>
                 <button type="button" className={styles.button__close} onClick={onClose}></button>
             </div>
             <div className={styles.container}>
                 <div className={styles.textblock}>
                     <h2 className={styles.title}>Запишитесь на приём онлайн</h2>
-                    <h2 className={styles.text}>Администратор свяжется с вами черезWhatsApp в течение дня и уточнит детали</h2>
+                    <h2 className={styles.text}>Администратор свяжется с вами через WhatsApp в течение дня и уточнит детали</h2>
                 </div>
                 <form className={styles.form} action="">
                     <input className={styles.input} type="text" placeholder="ФИО" required/>

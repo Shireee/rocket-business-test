@@ -1,4 +1,4 @@
-.nav{
+.nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -6,7 +6,8 @@
     min-height: 43px;
 }
 
-.nav::before{
+.nav::before {
+    z-index: -1;
     position: absolute;
     content: '';
     width: 100%;
@@ -16,8 +17,7 @@
     background-color: rgb(31, 161, 129);
 }
 
-.nav__link{
-    z-index: 1;
+.nav__link {
     color: rgb(255, 255, 255);
     font-family: PT Sans Caption;
     font-size: 16px;
@@ -27,6 +27,12 @@
     cursor: pointer;
 }
 
-.nav__link:last-child{
+.nav__link:last-child {
     margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .nav{
+        display: none;
+    }
 }

@@ -1,4 +1,4 @@
-.header{
+.header {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -7,29 +7,29 @@
     width: 100%;
 }
 
-.logoblock{
+.logoblock {
     display: flex;
     align-items: center;
     justify-content: space-between;
     column-gap: 44px;
 }
 
-.address{
+.address {
     font-style: normal;
     position: relative;
 }
 
-.address::before{
+.address::before {
+    content: '';
     position: absolute;
     top: 0;
     left: -22px;
-    content: '';
     width: 16px;
     height: 20px;
     background-image: url(../../img/mark.svg);
 }
 
-.address__title{
+.address__title {
     color: rgb(54, 72, 68);
     font-family: PT Sans Caption;
     font-size: 14px;
@@ -37,7 +37,7 @@
     line-height: 21px;
 }
 
-.address__text{
+.address__text {
     color: rgb(134, 134, 134);
     font-family: PT Sans Caption;
     font-size: 14px;
@@ -45,14 +45,14 @@
     line-height: 21px;
 }
 
-.contacts{
+.contacts {
     display: flex;
     align-items: center;
     justify-content: space-between;
     column-gap: 35px;
 }
 
-.contacts__phone{
+.phone {
     color: rgb(54, 72, 68);
     font-family: PT Sans Caption;
     font-size: 16px;
@@ -61,17 +61,17 @@
     position: relative;
 }
 
-.contacts__phone::before{
-    position: absolute;
+.phone::before {
     content: '';
+    position: absolute;
     left: -35px;
     top: -2px;
+    background-image: url(../../img/whatsapp-header-icon.svg);
     width: 27px;
     height: 28px;
-    background-image: url(../../img/whatsapp-header-icon.svg);
 }
 
-.contacts__button{
+.button {
     color: rgb(255, 255, 255);
     font-family: PT Sans Caption;
     font-size: 14px;
@@ -85,6 +85,64 @@
     cursor: pointer;
 }
 
-.contacts__button:hover{
+.button:hover {
     background: #00D29F;
+}
+
+.burger__open {
+    display: flex;
+    align-items: center;
+    width: 37px;
+    height: 26px;
+    background-image: url(../../img/burger-open.svg);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    cursor: pointer;
+}
+
+.burger__close{
+    display: flex;
+    align-items: center;
+    width: 37px;
+    height: 26px;
+    background-image: url(../../img/burger-close.svg);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    cursor: pointer;
+}
+
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .logoblock, .contacts{
+        display: none;
+    }
+
+    .address::before, .phone::before{
+        content: none;
+    }
+
+    .mobile{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .phone{
+        color: rgb(54, 72, 68);
+        font-family: PT Sans Caption;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 21px;
+        text-align: right;
+    }
+
+    .address__text{
+        font-size: 13px;
+        line-height: 17px;
+        text-align: right;
+    }
 }

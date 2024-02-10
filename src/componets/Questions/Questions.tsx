@@ -5,7 +5,7 @@ import Question from "../Question/Question";
 const Questions = () => {
     return ( 
     <section className={styles.questions}>
-        <h2 className={styles.questions__title}>Часто задаваемые вопросы</h2>
+        <h2 className={styles.title}>Часто задаваемые вопросы</h2>
         <Question />
         <Question />
         <Question />

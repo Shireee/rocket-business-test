@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react';
 import styles from './Nav.module.css';
 
+
 const Nav = () => {
+
     return ( 
     <nav className={styles.nav}>
         <a className={styles.nav__link}>О клинике</a>
@@ -9,8 +11,8 @@ const Nav = () => {
         <a className={styles.nav__link}>Специалисты</a>
         <a className={styles.nav__link}>Цены</a>
         <a className={styles.nav__link}>Контакты</a>
-    </nav>    
+    </nav>
     );
 }
- 
+
 export default Nav;

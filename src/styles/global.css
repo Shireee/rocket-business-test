@@ -15,7 +15,14 @@
     margin-right: auto;
     width: 100%;
     height: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    max-width: 1160px;
+    max-width: 1140px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding-left: 17px;
+        padding-right: 17px;
+        max-width: 1174px;
+    }
+    
 }

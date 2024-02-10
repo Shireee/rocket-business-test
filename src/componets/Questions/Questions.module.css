@@ -1,4 +1,4 @@
-.questions{
+.questions {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,11 +7,25 @@
     row-gap: 24px;
 }
 
-.questions__title{
+.title {
     margin-bottom: 40px;
     color: rgb(54, 72, 68);
     font-family: PT Sans Caption;
     font-size: 36px;
     font-weight: 700;
     line-height: 47px;
+}
+
+@media screen and (max-width: 768px) {
+    .questions{
+        margin-top: 35px;
+        row-gap: 14px;
+    }
+
+    .questions__title {
+        margin-bottom: 30px;
+        color: rgb(54, 72, 68);
+        font-size: 26px;
+        line-height: 34px;
+    }
 }
