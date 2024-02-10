@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styles from './Question.module.css';
 
-const Question = () => {
+const Question: React.FC<Question> = ({ title, text }) => {
     const detailsRef = useRef<HTMLDetailsElement>(null);
 
     useEffect(() => {
@@ -21,11 +21,14 @@ const Question = () => {
         window.addEventListener('resize', checkWindowSize);
         return () => {window.removeEventListener('resize', checkWindowSize)};
     }, []);
-    
+
+    // Split by </br>
+    const paragraphs = text.split('</br>');
+
     return ( 
         <details ref={detailsRef} className={styles.question}>
-            <summary className={styles.title}>Заголовок часто задаваемого вопроса</summary>
-            <p className={styles.text}>Blandit et et ac non interdum odio tristique diam vestibulum. Velit in quis consequat lacus fringilla amet elementum pharetra massa. Morbi euismod nulla cras adipiscing tristique aliquet purus adipiscing. </p>
+            <summary className={styles.title}>{title}</summary>
+            {paragraphs.map((text, index) => ( <p key={index} className={styles.text}> {text} </p> ))}
         </details>    
     );
 }
