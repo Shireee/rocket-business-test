@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import styles from './Slide.module.css';
 import PopUp from "../PopUp/PopUp";
+import ReactDOM from "react-dom";
 
 const Slide = () => {
     const [isPopUp, setIsPopUp] = useState<Boolean>(false);
 
     return ( 
     <>
-        {isPopUp && <PopUp onClose={() => setIsPopUp(false)} />}
+        {isPopUp && ReactDOM.createPortal(<PopUp onClose={() => setIsPopUp(false)} />, document.body )}
         <article className={styles.slide}>
             
             <div className={styles.textblock}> 
@@ -30,7 +31,7 @@ const Slide = () => {
                     <button className={styles.buttons__details}>Подробнее</button>
                 </div>
             </div>
-            <img className={styles.slide__image} src="./img/slide.png" alt="slide-img" />
+            <img className={styles.slide__image} src="./img/slide.jpg" alt="slide-img" />
         </article>
     </>    
     );
